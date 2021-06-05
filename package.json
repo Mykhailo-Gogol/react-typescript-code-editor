@@ -17,6 +17,7 @@
     "faker": "^5.5.3",
     "googleapis": "^73.0.0",
     "localforage": "^1.9.0",
+    "monaco-editor": "0.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-notifications": "^1.7.2",

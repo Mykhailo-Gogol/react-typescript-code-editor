@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import { unpkgPathPlugin } from '../plugins/unpkg-path-plugin'
 import { fetchPlugin } from '../plugins/fetch-plugin'
+import CodeEditor from './CodeEditor'
 
 import 'react-notifications/lib/notifications.css'
 
@@ -62,9 +63,12 @@ const CodeApp: React.FC = () => {
     iframeRef.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
   }
 
+  const innitialEditorValue = 'import React from "react"'
+
   return (
     <section>
       <h1>Compile</h1>
+      <CodeEditor innitialValue={innitialEditorValue} />
       <textarea
         value={input}
         onChange={(e) => {
