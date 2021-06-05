@@ -68,7 +68,12 @@ const CodeApp: React.FC = () => {
   return (
     <section>
       <h1>Compile</h1>
-      <CodeEditor innitialValue={innitialEditorValue} />
+      <CodeEditor
+        onChange={(value) => {
+          setInput(value)
+        }}
+        innitialValue={innitialEditorValue}
+      />
       <textarea
         value={input}
         onChange={(e) => {
