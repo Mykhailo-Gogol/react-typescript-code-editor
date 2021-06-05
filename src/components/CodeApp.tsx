@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import { unpkgPathPlugin } from '../plugins/unpkg-path-plugin'
 import { fetchPlugin } from '../plugins/fetch-plugin'
+
 import CodeEditor from './CodeEditor'
 
 import 'react-notifications/lib/notifications.css'
@@ -74,12 +75,12 @@ const CodeApp: React.FC = () => {
         }}
         innitialValue={innitialEditorValue}
       />
-      <textarea
+      {/* <textarea
         value={input}
         onChange={(e) => {
           setInput(e.target.value)
         }}
-      ></textarea>
+      ></textarea> */}
       <div>
         <button onClick={onClick}>Submit</button>
       </div>
