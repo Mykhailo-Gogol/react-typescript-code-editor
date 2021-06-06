@@ -20,7 +20,7 @@ body {
   color: white;
   background-color: #323232;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +33,10 @@ section {
 
 button {
   display: block;
-  width: 200px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
   text-align: center;
+  font-size: 13px;
   padding: 5px;
   margin: 10px 10px;
   background-color: #3780ec;
@@ -47,9 +48,9 @@ button {
 }
 
 button:hover {
-  background-color: #3780ec;
+  background-color: #377fec96;
   color: white;
-  box-shadow: inset 0px 0px 1px 1px #8692a5;
+  box-shadow: inset 0px 0px 1px 1px #ffffff56;
 }
 
 .code_editor_wrapper {

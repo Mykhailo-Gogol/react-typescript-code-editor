@@ -51,10 +51,10 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
         options={{
           wordWrap: 'on',
           minimap: { enabled: false },
-          showUnused: false,
+          showUnused: true,
           folding: false,
           lineNumbersMinChars: 3,
-          fontSize: 16,
+          fontSize: 13,
           scrollBeyondLastLine: false,
           automaticLayout: true,
         }}
