@@ -4,6 +4,8 @@ import Editor, { EditorDidMount } from '@monaco-editor/react'
 import prettier from 'prettier'
 import parser from 'prettier/parser-babel'
 
+import './code-editor-styles.css'
+
 // TS
 interface CodeEditorProps {
   innitialValue: string
@@ -46,7 +48,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
         value={innitialValue}
         theme="dark"
         width="600px"
-        height="400px"
+        height="100%"
         language="javascript"
         options={{
           wordWrap: 'on',

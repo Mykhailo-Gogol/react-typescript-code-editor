@@ -1,0 +1,24 @@
+.preview_wrapper {
+  position: relative;
+  width: 600px;
+}
+
+.preview_wrapper iframe {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+}
+
+.react-draggable-transparent-selection .preview_wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}

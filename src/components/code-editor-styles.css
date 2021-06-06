@@ -1,0 +1,34 @@
+.editor_wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 600px;
+}
+
+.button-format {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  opacity: 0;
+  z-index: 20;
+
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 13px;
+  padding: 0 5px;
+  background-color: #3780ec;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+.button-format:hover {
+  background-color: #377fec96;
+  color: white;
+}
+
+.editor_wrapper:hover .button-format {
+  opacity: 1;
+  transition: opacity 250ms;
+}
