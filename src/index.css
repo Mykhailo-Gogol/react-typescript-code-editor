@@ -25,18 +25,16 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   margin: 30px auto;
-  width: 500px;
+  /* width: 500px; */
 }
 
 form {
-  /* border: 1px solid rgba(255, 255, 255, 0.6); */
   border-radius: 5px;
   margin: 30px auto;
   width: 250px;
 }
 
 h1 {
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
   border-radius: 5px;
   width: 250px;
   text-align: center;
@@ -54,7 +52,7 @@ select {
   padding: 5px;
   margin: 10px 10px;
   border: 1px solid #3780ec;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 2px 1px #3780ec;
   margin-left: auto;
   margin-right: auto;
@@ -64,14 +62,12 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
 textarea {
   display: block;
   width: 300px;
   height: 200px;
-  /* text-align: center; */
   padding: 5px;
   margin: 10px 10px;
   border: 1px solid #3780ec;
@@ -89,4 +85,9 @@ button:hover {
 input:focus {
   box-shadow: inset 0px 0px 2px 1px #3780ec;
   outline: none;
+}
+
+.code_editor_wrapper {
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -20,6 +20,15 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 })
   }
 
+  // useEffect(() => {
+  //   window.addEventListener('keypress', (event) => {
+  //     event.preventDefault()
+  //     if (event.key === 'Escape') {
+  //     }
+  //   })
+  //   return () => window.removeEventListener('keypress', () => {})
+  // })
+
   const handleClickFormat = () => {
     const unformatted = editorRef.current.getModel().getValue()
     const formatted = prettier.format(unformatted, {
@@ -34,13 +43,19 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
   }
 
   return (
-    <div>
-      <button onClick={handleClickFormat}>Format</button>
+    <div className="editor_wrapper">
+      <button
+        className="button button-format is-primary is-small"
+        onClick={handleClickFormat}
+      >
+        Format
+      </button>
       <Editor
         editorDidMount={onEditorDidMount}
         value={innitialValue}
         theme="dark"
-        height="300px"
+        width="600px"
+        height="400px"
         language="javascript"
         options={{
           wordWrap: 'on',
@@ -52,8 +67,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
           scrollBeyondLastLine: false,
           automaticLayout: true,
         }}
-
-        // defaultValue="// some comment"
       />
     </div>
   )

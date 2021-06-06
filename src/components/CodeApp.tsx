@@ -67,37 +67,32 @@ const CodeApp: React.FC = () => {
   const innitialEditorValue = 'import React from "react"'
 
   return (
-    <section>
-      <h1>Compile</h1>
+    <section className="code_editor_wrapper">
       <CodeEditor
         onChange={(value) => {
           setInput(value)
         }}
         innitialValue={innitialEditorValue}
       />
-      {/* <textarea
-        value={input}
-        onChange={(e) => {
-          setInput(e.target.value)
-        }}
-      ></textarea> */}
       <div>
         <button onClick={onClick}>Submit</button>
+
+        <iframe
+          ref={iframeRef}
+          srcDoc={html}
+          sandbox="allow-scripts"
+          title="preview"
+          style={{
+            display: 'block',
+            width: '600px',
+            height: '400px',
+            outline: 'none',
+            border: '1px solid rgba(255, 255, 255, 0.6)',
+            color: '#fff',
+            margin: '30px auto',
+          }}
+        ></iframe>
       </div>
-      <iframe
-        ref={iframeRef}
-        srcDoc={html}
-        sandbox="allow-scripts"
-        title="preview"
-        style={{
-          display: 'block',
-          width: '100%',
-          outline: 'none',
-          border: 'none',
-          borderTop: '1px solid rgba(255, 255, 255, 0.6)',
-          color: '#fff',
-        }}
-      ></iframe>
     </section>
   )
 }
