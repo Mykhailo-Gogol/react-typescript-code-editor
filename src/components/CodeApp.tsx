@@ -6,13 +6,11 @@ import { fetchPlugin } from '../plugins/fetch-plugin'
 
 import CodeEditor from './CodeEditor'
 
-import 'react-notifications/lib/notifications.css'
-
 const CodeApp: React.FC = () => {
+  const [input, setInput] = useState('')
+
   const outputRef = useRef<any>()
   const iframeRef = useRef<any>()
-
-  const [input, setInput] = useState('')
 
   const startService = async () => {
     outputRef.current = await esbuild.startService({
@@ -20,6 +18,7 @@ const CodeApp: React.FC = () => {
       wasmURL: 'https://unpkg.com/esbuild-wasm@0.8.27/esbuild.wasm',
     })
   }
+
   useEffect(() => {
     startService()
   }, [])
@@ -44,12 +43,9 @@ const CodeApp: React.FC = () => {
   </html>`
 
   const onClick = async () => {
-    if (!outputRef.current) {
-      return
-    }
+    if (!outputRef.current) return
 
     iframeRef.current.srcdoc = html
-
     const result = await outputRef.current.build({
       entryPoints: ['index.js'],
       bundle: true,
@@ -60,7 +56,6 @@ const CodeApp: React.FC = () => {
         global: 'window',
       },
     })
-
     iframeRef.current.contentWindow.postMessage(result.outputFiles[0].text, '*')
   }
 
@@ -76,21 +71,11 @@ const CodeApp: React.FC = () => {
       />
       <div>
         <button onClick={onClick}>Submit</button>
-
         <iframe
           ref={iframeRef}
           srcDoc={html}
           sandbox="allow-scripts"
           title="preview"
-          style={{
-            display: 'block',
-            width: '600px',
-            height: '400px',
-            outline: 'none',
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            color: '#fff',
-            margin: '30px auto',
-          }}
         ></iframe>
       </div>
     </section>

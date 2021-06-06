@@ -4,6 +4,7 @@ import Editor, { EditorDidMount } from '@monaco-editor/react'
 import prettier from 'prettier'
 import parser from 'prettier/parser-babel'
 
+// TS
 interface CodeEditorProps {
   innitialValue: string
   onChange(value: string): void
@@ -11,23 +12,14 @@ interface CodeEditorProps {
 
 const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
   const editorRef = useRef<any>()
+
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     editorRef.current = monacoEditor
     monacoEditor.onDidChangeModelContent(() => {
       return onChange(getValue())
     })
-
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 })
   }
-
-  // useEffect(() => {
-  //   window.addEventListener('keypress', (event) => {
-  //     event.preventDefault()
-  //     if (event.key === 'Escape') {
-  //     }
-  //   })
-  //   return () => window.removeEventListener('keypress', () => {})
-  // })
 
   const handleClickFormat = () => {
     const unformatted = editorRef.current.getModel().getValue()
@@ -38,7 +30,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
       semi: true,
       singleQuote: true,
     })
-
     editorRef.current.setValue(formatted)
   }
 

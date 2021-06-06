@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MobileView = () => {
+const MobileView: React.FC = () => {
   return (
     <div
       style={{
