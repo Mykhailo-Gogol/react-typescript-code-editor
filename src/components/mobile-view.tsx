@@ -11,7 +11,10 @@ const MobileView: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1 style={{ color: 'white' }}> 🖥️ Please, open on the Desktop 🖥️</h1>
+      <h1 style={{ color: 'white', textAlign: 'center' }}>
+        {' '}
+        🖥️ Please, open on the Desktop 🖥️
+      </h1>
     </div>
   )
 }

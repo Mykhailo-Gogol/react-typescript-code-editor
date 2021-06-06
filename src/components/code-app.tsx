@@ -14,7 +14,7 @@ const CodeApp: React.FC = () => {
           padding: '15px 0',
         }}
       >
-        Compile Editor
+        Code Editor
       </h1>
       <CodeCell />
     </section>
