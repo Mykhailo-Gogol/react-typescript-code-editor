@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-typescript-code-editor/static/css/main.8d10eb80.chunk.css",
-    "main.js": "/react-typescript-code-editor/static/js/main.a892d482.chunk.js",
-    "main.js.map": "/react-typescript-code-editor/static/js/main.a892d482.chunk.js.map",
+    "main.css": "/react-typescript-code-editor/static/css/main.3e457d7d.chunk.css",
+    "main.js": "/react-typescript-code-editor/static/js/main.0a02b343.chunk.js",
+    "main.js.map": "/react-typescript-code-editor/static/js/main.0a02b343.chunk.js.map",
     "runtime-main.js": "/react-typescript-code-editor/static/js/runtime-main.f75a0f0b.js",
     "runtime-main.js.map": "/react-typescript-code-editor/static/js/runtime-main.f75a0f0b.js.map",
-    "static/js/2.49953d1b.chunk.js": "/react-typescript-code-editor/static/js/2.49953d1b.chunk.js",
-    "static/js/2.49953d1b.chunk.js.map": "/react-typescript-code-editor/static/js/2.49953d1b.chunk.js.map",
+    "static/js/2.69357d82.chunk.js": "/react-typescript-code-editor/static/js/2.69357d82.chunk.js",
+    "static/js/2.69357d82.chunk.js.map": "/react-typescript-code-editor/static/js/2.69357d82.chunk.js.map",
     "index.html": "/react-typescript-code-editor/index.html",
-    "static/css/main.8d10eb80.chunk.css.map": "/react-typescript-code-editor/static/css/main.8d10eb80.chunk.css.map",
-    "static/js/2.49953d1b.chunk.js.LICENSE.txt": "/react-typescript-code-editor/static/js/2.49953d1b.chunk.js.LICENSE.txt"
+    "static/css/main.3e457d7d.chunk.css.map": "/react-typescript-code-editor/static/css/main.3e457d7d.chunk.css.map",
+    "static/js/2.69357d82.chunk.js.LICENSE.txt": "/react-typescript-code-editor/static/js/2.69357d82.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f75a0f0b.js",
-    "static/js/2.49953d1b.chunk.js",
-    "static/css/main.8d10eb80.chunk.css",
-    "static/js/main.a892d482.chunk.js"
+    "static/js/2.69357d82.chunk.js",
+    "static/css/main.3e457d7d.chunk.css",
+    "static/js/main.0a02b343.chunk.js"
   ]
 }
