@@ -1,20 +1,17 @@
 import React from 'react'
+import './code-app-styles.css'
 import CodeCell from './code-cell'
 
 const CodeApp: React.FC = () => {
   return (
     <section>
       <h1
-        style={{
-          color: 'white',
-          textAlign: 'center',
-          border: '1px solid rgba(255, 255, 255, 0.2)',
-          borderBottom: 'none',
-          margin: '0',
-          padding: '15px 0',
-        }}
+        // href="https://github.com/Mykhailo-Gogol/react-typescript-code-editor"
+        // target="_blank"
+        className="header-link"
+        // rel="noreferrer"
       >
-        Code Editor
+        GitHub
       </h1>
       <CodeCell />
     </section>

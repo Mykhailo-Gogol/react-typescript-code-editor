@@ -19,9 +19,10 @@ code {
 body {
   color: white;
   background-color: #323232;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  display: flex;
+  padding: 0 20px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }

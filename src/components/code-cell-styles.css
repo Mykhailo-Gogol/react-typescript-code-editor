@@ -1,10 +1,14 @@
-.editor_wrapper {
+.code-cell-wrapper {
   position: relative;
   margin: 0;
-  padding: 0;
+  width: 100%;
 }
 
-.button-format {
+.submit_styles {
+  background-color: '#3780ec';
+  border: none;
+  color: white;
+
   position: absolute;
   top: 15px;
   right: 25px;
@@ -22,12 +26,12 @@
   border-radius: 3px;
 }
 
-.button-format:hover {
+.submit_styles:hover {
   background-color: #0253ce;
   color: white;
 }
 
-/* .editor_wrapper:hover .button-format {
+/* .code-cell-wrapper:hover .submit_styles {
   opacity: 1;
   transition: opacity 250ms;
 } */

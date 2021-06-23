@@ -6,7 +6,7 @@ import CodeApp from './components/code-app'
 import MobileView from './components/mobile-view'
 
 const App: React.FC = () => {
-  const isWide = useMedia('(min-width: 1080px)')
+  const isWide = useMedia('(min-width: 800px)')
 
   return <div>{isWide ? <CodeApp /> : <MobileView />}</div>
 }

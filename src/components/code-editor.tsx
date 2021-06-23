@@ -15,14 +15,6 @@ interface CodeEditorProps {
 const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
   const editorRef = useRef<any>()
 
-  const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
-    editorRef.current = monacoEditor
-    monacoEditor.onDidChangeModelContent(() => {
-      return onChange(getValue())
-    })
-    monacoEditor.getModel()?.updateOptions({ tabSize: 2 })
-  }
-
   const handleClickFormat = () => {
     const unformatted = editorRef.current.getModel().getValue()
     const formatted = prettier.format(unformatted, {
@@ -33,6 +25,16 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
       singleQuote: true,
     })
     editorRef.current.setValue(formatted)
+  }
+
+  const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
+    editorRef.current = monacoEditor
+    monacoEditor.onDidChangeModelContent(() => {
+      return onChange(getValue())
+    })
+    monacoEditor.getModel()?.updateOptions({ tabSize: 2 })
+
+    handleClickFormat()
   }
 
   return (
@@ -47,7 +49,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, innitialValue }) => {
         editorDidMount={onEditorDidMount}
         value={innitialValue}
         theme="dark"
-        width="600px"
+        width="50vw"
         height="100%"
         language="javascript"
         options={{
